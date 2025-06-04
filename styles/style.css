@@ -1,0 +1,437 @@
+:root {
+    --primary: #4f46e5;
+    --background: #f5f5f5;
+    --dark: #1f2937;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: white;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+
+body {
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+background-color: #f0f4ff; 
+overflow-x: hidden; 
+}
+
+  
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to right, #e0e7ff, #c8d3ff);
+    color: #4A4A4A;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    transition: top 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+   
+    justify-content: space-between; 
+}
+
+#navbar h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #3f51b5;
+    margin: 0;
+}
+
+
+#navbar ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    gap: 30px;
+}
+
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #5d6d7e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s ease; 
+}
+
+#navbar ul li a:hover {
+    color: #3f51b5; 
+}
+
+#navbar.show {
+    opacity: 1;
+    pointer-events: auto;
+    top: 0;
+}
+
+
+.hero-section {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    min-height: 100vh; 
+    align-items: center; 
+    padding: 0 0 0 5%; 
+    background: linear-gradient(to right, #f0f4ff, #e0e7ff);
+}
+
+
+.hero-content {
+    padding-right: 30px; 
+    max-width: 550px; 
+}
+
+.hero-content h1 {
+    font-size: 3.5em; 
+    font-weight: 700;
+    color: #3f51b5; 
+    margin-bottom: 10px;
+    line-height: 1.2; 
+}
+
+.hero-content h1 .highlight {
+   
+    color: #536dfe; 
+}
+
+.hero-content h2 {
+    font-size: 2.2em;
+    font-weight: 500;
+    color: #5a70e0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: #7f8c8d; 
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #6a82fb, #fc5c7d); 
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px; 
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+.hero-image-container {
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; 
+}
+
+.hero-image-container img {
+    display: block;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center right; 
+
+    -webkit-mask-image: linear-gradient(to right,
+        rgba(0, 0, 0, 0) 0%,   
+        rgba(0, 0, 0, 0.05) 5%, 
+        rgba(0, 0, 0, 0.2) 15%, 
+        rgba(0, 0, 0, 0.5) 30%, 
+        rgba(0, 0, 0, 0.8) 50%, 
+        rgba(0, 0, 0, 1) 70%   
+    );
+    mask-image: linear-gradient(to right,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.05) 5%,
+        rgba(0, 0, 0, 0.2) 15%,
+        rgba(0, 0, 0, 0.5) 30%,
+        rgba(0, 0, 0, 0.8) 50%,
+        rgba(0, 0, 0, 1) 70%
+    );
+    transition: mask-image 0.5s ease; 
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        grid-template-columns: 1fr; 
+        padding: 40px 5%; 
+        min-height: auto; 
+    }
+
+    .hero-content {
+        padding-right: 0;
+        text-align: center; 
+        margin-bottom: 40px; 
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em; 
+    }
+
+    .hero-content h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-image-container {
+        height: 300px; 
+        mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.05) 5%,
+            rgba(0, 0, 0, 0.2) 15%,
+            rgba(0, 0, 0, 0.5) 30%,
+            rgba(0, 0, 0, 0.8) 50%,
+            rgba(0, 0, 0, 1) 70%
+        );
+        -webkit-mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.05) 5%,
+            rgba(0, 0, 0, 0.2) 15%,
+            rgba(0, 0, 0, 0.5) 30%,
+            rgba(0, 0, 0, 0.8) 50%,
+            rgba(0, 0, 0, 1) 70%
+        );
+    }
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #6D83FD, #B982FF);  
+    color: white;
+    padding: 14px 28px; 
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em; 
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    box-shadow: none; 
+    text-transform: none; 
+    letter-spacing: normal; 
+}
+
+.btn-primary:hover { 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background: linear-gradient(to right, #5a70e0, #a872e6); 
+}
+
+.btn-primary:active {
+    
+    box-shadow: none;
+}
+/* Estilos para la sección completa de "Qué te ofrezco?" */
+.services {
+    padding: 80px 5%; /* Más padding vertical y horizontal para centrar el contenido */
+    text-align: center; /* Centra el título y las tarjetas */
+    background: linear-gradient(to bottom, #f0f4ff, #e0e7ff); /* Degradado suave de fondo para la sección */
+}
+
+/* Estilos para el título de la sección */
+.services h3 {
+    font-size: 2.8em; /* Tamaño de fuente para el título */
+    font-weight: 700;
+    color: #3f51b5; /* Color azul principal de tu web */
+    margin-bottom: 60px; /* Espacio debajo del título y las tarjetas */
+}
+
+/* Contenedor de las tarjetas de servicio */
+.service-cards {
+    display: flex; /* Usamos flexbox para alinear las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea en pantallas pequeñas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 30px; /* Espacio entre las tarjetas */
+}
+
+/* Estilos para cada tarjeta individual */
+.service-cards .card {
+    background-color: white; /* Fondo blanco para las tarjetas */
+    padding: 35px 30px; /* Más padding interno para un look más espacioso */
+    border-radius: 15px; /* Bordes redondeados más pronunciados, similar a la imagen */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Sombra suave y más difusa para el efecto flotante */
+    text-align: center;
+    max-width: 320px; /* Limita el ancho máximo de cada tarjeta */
+    flex: 1 1 300px; /* Permite que la tarjeta crezca y se encoja, con una base de 300px */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos de hover */
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho/alto */
+}
+
+.service-cards .card:hover {
+    transform: translateY(-8px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el mouse */
+}
+
+/* Estilos para el título dentro de la tarjeta */
+.service-cards .card h4 {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #3f51b5; /* Azul principal para el título de la tarjeta */
+    margin-top: 0;
+    margin-bottom: 15px; /* Espacio entre título y párrafo */
+}
+
+/* Estilos para el párrafo dentro de la tarjeta */
+.service-cards .card p {
+    font-size: 1.05em;
+    color: #7f8c8d; /* Un gris suave para el texto de la descripción */
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .services h3 {
+        font-size: 2em; /* Ajusta el tamaño del título en móvil */
+        margin-bottom: 40px;
+    }
+
+    .service-cards {
+        flex-direction: column; /* Apila las tarjetas verticalmente en pantallas pequeñas */
+        align-items: center; /* Centra las tarjetas apiladas */
+    }
+
+    .service-cards .card {
+        max-width: 90%; /* Las tarjetas ocupan casi todo el ancho disponible en móvil */
+        width: 100%; /* Asegura que la tarjeta use el 90% del ancho del contenedor padre */
+        padding: 30px 25px; /* Ajusta el padding en móvil */
+    }
+
+    .service-cards .card h4 {
+        font-size: 1.4em;
+    }
+
+    .service-cards .card p {
+        font-size: 1em;
+    }
+}
+
+
+/* ... (todo tu CSS anterior para .services, h3, .service-cards, .card, etc.) ... */
+
+/* Estilos para el icono dentro de la tarjeta */
+svg {
+    width: 60px; /* Tamaño del icono */
+    height: 60px; /* Igualar ancho y alto */
+    margin-bottom: 20px; /* Espacio entre el icono y el título */
+    color: #3f51b5; /* Este color se aplicará al icono si usa fill="currentColor" */
+    /* Si el SVG no tiene fill="currentColor" y no se colorea, podrías necesitar */
+    /* algo como filter: drop-shadow(0 0 0 #3f51b5); para forzar el color, */
+    /* pero `fill="currentColor"` es la forma más limpia. */
+}
+
+/* ... (el resto de tu CSS para las tarjetas y responsividad) ... */
+
+.projects {
+    padding: 4rem;
+    background-color: #e0e7ff;
+}
+
+.projects h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-gallery {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.project img {
+    width: 100%;
+    display: block;
+}
+
+.contact {
+    padding: 4rem;
+    background-color: white;
+    text-align: center;
+}
+
+.contact h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact input, .contact textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.contact button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #1f2937;
+    color: white;
+}
