@@ -902,3 +902,87 @@ footer {
         right: 20px;
     }
 }
+
+/* Estilos para el WhatsApp Link en el Modal */
+.whatsapp-contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Espacio entre el botón de enviar y el icono */
+}
+
+.whatsapp-icon {
+    position: relative; /* Para posicionar el tooltip */
+    display: inline-flex; /* Para centrar el icono y el tooltip */
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Tamaño del área del icono */
+    height: 60px;
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    color: white;
+    border-radius: 50%; /* Icono circular */
+    font-size: 2.5em; /* Tamaño del icono */
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra para el icono */
+}
+
+.whatsapp-icon:hover {
+    transform: translateY(-5px) scale(1.05); /* Pequeño efecto al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.whatsapp-icon .bi-whatsapp {
+    /* Asegura que el icono dentro del a se ajuste */
+    display: block;
+    line-height: 1; /* Ayuda a la alineación vertical */
+}
+
+
+/* Estilos para el Tooltip de WhatsApp */
+.whatsapp-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: 300px; /* Ancho del tooltip */
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%; /* Posiciona el tooltip encima del icono */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    font-size: 0.4em;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+}
+
+.whatsapp-tooltip a {
+     font-size: 10px;
+}
+
+.whatsapp-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Flecha apuntando hacia abajo */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.whatsapp-icon:hover .whatsapp-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Ajustes para el modal en móviles si el tooltip molesta */
+@media (max-width: 480px) {
+    .whatsapp-tooltip {
+        width: 180px; /* Ligeramente más estrecho en móviles */
+        font-size: 0.85em;
+        padding: 8px 0;
+    }
+}
