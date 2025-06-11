@@ -1,6 +1,8 @@
 // Lógica de la Navbar (código original de tu archivo main.js)
 const navbar = document.getElementById('navbar');
 
+
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
         navbar.classList.add('show');
