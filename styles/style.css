@@ -138,6 +138,7 @@ overflow-x: hidden;
     margin-top: 0;
     margin-bottom: 20px;
     
+    
 }
 
 .hero-content p {
@@ -145,6 +146,7 @@ overflow-x: hidden;
     color: #7f8c8d; 
     margin-bottom: 30px;
     line-height: 1.6;
+    
 }
 
 .btn-primary {
@@ -158,6 +160,7 @@ overflow-x: hidden;
     cursor: pointer;
     transition: all 0.7s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn-primary:hover {
@@ -270,78 +273,81 @@ overflow-x: hidden;
 }
 /* Estilos para la sección completa de "Qué te ofrezco?" */
 .services {
-    padding: 80px 5%; /* Más padding vertical y horizontal para centrar el contenido */
-    text-align: center; /* Centra el título y las tarjetas */
-    background: linear-gradient(to bottom, #f0f4ff, #e0e7ff); /* Degradado suave de fondo para la sección */
+    padding: 80px 5%; 
+    text-align: center; 
+    background: linear-gradient(to bottom, #f0f4ff, #e0e7ff); 
+    z-index: 10;
 }
 
 /* Estilos para el título de la sección */
 .services h3 {
-    font-size: 2.8em; /* Tamaño de fuente para el título */
+    font-size: 2.8em; 
     font-weight: 700;
-    color: #3f51b5; /* Color azul principal de tu web */
-    margin-bottom: 60px; /* Espacio debajo del título y las tarjetas */
+    color: #3f51b5; 
+    margin-bottom: 60px; 
 }
 
 /* Contenedor de las tarjetas de servicio */
 .service-cards {
-    display: flex; /* Usamos flexbox para alinear las tarjetas */
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea en pantallas pequeñas */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
-    gap: 30px; /* Espacio entre las tarjetas */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
 }
 
 /* Estilos para cada tarjeta individual */
 .service-cards .card {
-    background-color: white; /* Fondo blanco para las tarjetas */
-    padding: 35px 30px; /* Más padding interno para un look más espacioso */
-    border-radius: 15px; /* Bordes redondeados más pronunciados, similar a la imagen */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Sombra suave y más difusa para el efecto flotante */
+    background-color: white; 
+    padding: 35px 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); 
     text-align: center;
-    max-width: 320px; /* Limita el ancho máximo de cada tarjeta */
-    flex: 1 1 300px; /* Permite que la tarjeta crezca y se encoja, con una base de 300px */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos de hover */
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho/alto */
+    max-width: 320px; 
+    flex: 1 1 300px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-sizing: border-box; 
 }
 
 .service-cards .card:hover {
-    transform: translateY(-8px); /* Efecto de elevación al pasar el mouse */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el mouse */
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
 }
 
 /* Estilos para el título dentro de la tarjeta */
 .service-cards .card h4 {
     font-size: 1.6em;
     font-weight: 600;
-    color: #3f51b5; /* Azul principal para el título de la tarjeta */
+    color: #3f51b5; 
     margin-top: 0;
-    margin-bottom: 15px; /* Espacio entre título y párrafo */
+    margin-bottom: 15px; 
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para el párrafo dentro de la tarjeta */
 .service-cards .card p {
     font-size: 1.05em;
-    color: #7f8c8d; /* Un gris suave para el texto de la descripción */
+    color: #7f8c8d; 
     line-height: 1.5;
     margin-bottom: 0;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
     .services h3 {
-        font-size: 2em; /* Ajusta el tamaño del título en móvil */
+        font-size: 2em; 
         margin-bottom: 40px;
     }
 
     .service-cards {
-        flex-direction: column; /* Apila las tarjetas verticalmente en pantallas pequeñas */
-        align-items: center; /* Centra las tarjetas apiladas */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .service-cards .card {
-        max-width: 90%; /* Las tarjetas ocupan casi todo el ancho disponible en móvil */
-        width: 100%; /* Asegura que la tarjeta use el 90% del ancho del contenedor padre */
-        padding: 30px 25px; /* Ajusta el padding en móvil */
+        max-width: 90%; 
+        width: 100%; 
+        padding: 30px 25px;
     }
 
     .service-cards .card h4 {
@@ -354,47 +360,46 @@ overflow-x: hidden;
 }
 
 
-/* ... (todo tu CSS anterior para .services, h3, .service-cards, .card, etc.) ... */
+
 
 /* Estilos para el icono dentro de la tarjeta */
 .services-icon {
-    width: 60px; /* Tamaño del icono */
-    height: 60px; /* Igualar ancho y alto */
-    margin-bottom: 20px; /* Espacio entre el icono y el título */
-    color: #3f51b5; /* Este color se aplicará al icono si usa fill="currentColor" */
-    /* Si el SVG no tiene fill="currentColor" y no se colorea, podrías necesitar */
-    /* algo como filter: drop-shadow(0 0 0 #3f51b5); para forzar el color, */
-    /* pero `fill="currentColor"` es la forma más limpia. */
+    width: 60px; 
+    height: 60px; 
+    margin-bottom: 20px; 
+    color: #3f51b5; 
+   
 }
 
-/* ... (el resto de tu CSS para las tarjetas y responsividad) ... */
+
 
 /* Estilos para el carrusel */
 .projects {
-    padding: 80px 5%; /* Aumenta el padding para el carrusel */
+    padding: 80px 5%; 
     background-color: #e0e7ff;
-    text-align: center; /* Centra el título */
+    text-align: center; 
 }
 
 .projects h3 {
-    font-size: 2.8em; /* Tamaño de fuente para el título */
+    font-size: 2.8em; 
     font-weight: 700;
-    color: #3f51b5; /* Color azul principal */
-    margin-bottom: 60px; /* Espacio debajo del título y el carrusel */
+    color: #3f51b5; 
+    margin-bottom: 60px; 
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-container {
     position: relative;
-    max-width: 900px; /* Ancho máximo del carrusel */
-    margin: 0 auto; /* Centra el carrusel */
-    overflow: hidden; /* Oculta los slides que no están visibles */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 900px; 
+    margin: 0 auto; 
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); 
 }
 
 .carousel-track-container {
     width: 100%;
-    overflow: hidden; /* Asegura que solo se vea un slide a la vez */
+    overflow: hidden; 
 }
 
 .carousel-track {
@@ -402,16 +407,16 @@ overflow-x: hidden;
     list-style: none;
     padding: 0;
     margin: 0;
-    transition: transform 0.5s ease-in-out; /* Animación de desplazamiento */
+    transition: transform 0.5s ease-in-out; 
 }
 
 .carousel-slide {
-    min-width: 100%; /* Cada slide ocupa el 100% del contenedor */
-    box-sizing: border-box; /* Incluye padding y border en el ancho */
-    display: flex; /* Para centrar el contenido verticalmente si es necesario */
+    min-width: 100%; 
+    box-sizing: border-box; 
+    display: flex; 
     justify-content: center;
     align-items: center;
-    position: relative; /* Para el overlay de información */
+    position: relative; 
 }
 
 .carousel-slide a {
@@ -421,7 +426,7 @@ overflow-x: hidden;
     color: inherit;
     position: relative;
     overflow: hidden;
-    border-radius: 15px; /* Para que las imágenes también tengan bordes redondeados */
+    border-radius: 15px; 
 }
 
 .carousel-slide img {
@@ -430,7 +435,7 @@ overflow-x: hidden;
     display: block;
     object-fit: cover;
     border-radius: 15px;
-    transition: transform 0.3s ease; /* Efecto de zoom en hover */
+    transition: transform 0.3s ease;
 }
 
 .carousel-slide a:hover img {
@@ -476,7 +481,7 @@ overflow-x: hidden;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(63, 81, 181, 0.7); /* Azul principal con transparencia */
+    background-color: rgba(63, 81, 181, 0.7); 
     color: white;
     border: none;
     padding: 10px 15px;
@@ -518,7 +523,7 @@ overflow-x: hidden;
 }
 
 .carousel-indicator.active {
-    background-color: #3f51b5; /* Azul principal */
+    background-color: #3f51b5; 
     transform: scale(1.2);
 }
 
@@ -548,15 +553,18 @@ overflow-x: hidden;
 
 @media (max-width: 480px) {
     .carousel-button {
-        display: none; /* Oculta los botones en pantallas muy pequeñas, se puede usar swipe */
+        display: none; 
     }
 }
 
 /* Estilos para la sección de Planes */
 .pricing {
     padding: 80px 5%;
-    background-color: #f0f4ff; /* Fondo más claro para destacar */
+    background-color: #f0f4ff; 
     text-align: center;
+    border-top: 2px solid #3f51b5;
+    box-shadow: 0 -3px 30px rgba(0, 0, 0, 0.3);
+
 }
 
 .pricing h3 {
@@ -594,7 +602,7 @@ overflow-x: hidden;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent; /* Para el borde del plan destacado */
+    border: 2px solid transparent; 
 }
 
 .price-card:hover {
@@ -603,15 +611,15 @@ overflow-x: hidden;
 }
 
 .price-card.featured {
-    border-color: #3f51b5; /* Borde azul para el plan destacado */
-    transform: scale(1.03); /* Ligeramente más grande */
+    border-color: #3f51b5; 
+    transform: scale(1.03); 
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
     position: relative;
     z-index: 1;
 }
 
 .price-card.featured:hover {
-    transform: translateY(-10px) scale(1.03); /* Mantiene la escala en hover */
+    transform: translateY(-10px) scale(1.03); 
 }
 
 .card-header h4 {
@@ -629,7 +637,7 @@ overflow-x: hidden;
 }
 
 .card-header .price span {
-    font-size: 0.7em; /* Para el símbolo de moneda */
+    font-size: 0.7em; 
 }
 
 .card-header .subtitle {
@@ -670,7 +678,7 @@ overflow-x: hidden;
 .price-card .btn-primary {
     width: 100%;
     padding: 15px 0;
-    margin-top: auto; /* Empuja el botón hacia abajo */
+    margin-top: auto; 
 }
 
 .disclaimer {
@@ -739,13 +747,13 @@ footer {
 .modal {
     display: none; /* Oculto por defecto */
     position: fixed;
-    z-index: 2000; /* Asegura que esté por encima de todo */
+    z-index: 2000; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.6); /* Fondo semi-transparente */
+    background-color: rgba(0,0,0,0.6); 
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -763,7 +771,7 @@ footer {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     width: 100%;
-    max-width: 500px; /* Ancho máximo para el formulario */
+    max-width: 500px; 
     position: relative;
     animation: fadeInModal 0.3s ease-out;
 }
@@ -828,7 +836,7 @@ footer {
 
 .modal-content .btn-primary {
     width: auto; /* Para que el botón no ocupe todo el ancho */
-    align-self: center; /* Centrar el botón */
+    align-self: center; 
     margin-top: 20px;
 }
 
@@ -851,7 +859,7 @@ footer {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50; 
     color: white;
     padding: 15px 30px;
     border-radius: 10px;
@@ -907,34 +915,34 @@ footer {
 .whatsapp-contact {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Espacio entre el botón de enviar y el icono */
+    margin-top: 20px; 
 }
 
 .whatsapp-icon {
-    position: relative; /* Para posicionar el tooltip */
-    display: inline-flex; /* Para centrar el icono y el tooltip */
+    position: relative; 
+    display: inline-flex; 
     align-items: center;
     justify-content: center;
-    width: 60px; /* Tamaño del área del icono */
+    width: 60px;
     height: 60px;
-    background-color: #25D366; /* Color de fondo de WhatsApp */
+    background-color: #25D366;
     color: white;
-    border-radius: 50%; /* Icono circular */
-    font-size: 2.5em; /* Tamaño del icono */
+    border-radius: 50%;
+    font-size: 2.5em;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra para el icono */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
 }
 
 .whatsapp-icon:hover {
-    transform: translateY(-5px) scale(1.05); /* Pequeño efecto al pasar el mouse */
+    transform: translateY(-5px) scale(1.05); 
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 .whatsapp-icon .bi-whatsapp {
-    /* Asegura que el icono dentro del a se ajuste */
+    
     display: block;
-    line-height: 1; /* Ayuda a la alineación vertical */
+    line-height: 1; 
 }
 
 
@@ -942,7 +950,7 @@ footer {
 .whatsapp-tooltip {
     visibility: hidden;
     opacity: 0;
-    width: 300px; /* Ancho del tooltip */
+    width: 300px;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -950,12 +958,12 @@ footer {
     padding: 10px 0;
     position: absolute;
     z-index: 1;
-    bottom: 120%; /* Posiciona el tooltip encima del icono */
+    bottom: 120%;
     left: 50%;
     transform: translateX(-50%);
     transition: opacity 0.3s ease, visibility 0.3s ease;
     font-size: 0.4em;
-    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    white-space: nowrap; 
 }
 
 .whatsapp-tooltip a {
@@ -965,7 +973,7 @@ footer {
 .whatsapp-tooltip::after {
     content: "";
     position: absolute;
-    top: 100%; /* Flecha apuntando hacia abajo */
+    top: 100%; 
     left: 50%;
     margin-left: -5px;
     border-width: 5px;
@@ -981,7 +989,7 @@ footer {
 /* Ajustes para el modal en móviles si el tooltip molesta */
 @media (max-width: 480px) {
     .whatsapp-tooltip {
-        width: 180px; /* Ligeramente más estrecho en móviles */
+        width: 180px; 
         font-size: 0.85em;
         padding: 8px 0;
     }
