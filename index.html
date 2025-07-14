@@ -35,15 +35,22 @@
 <body>
 
 
-<nav id="navbar">
-    <a href="https://github.com/ToMaZiT" target="_blank" aria-label="Visita mi perfil de Github"><i class="bi bi-github"></i></a>
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#planes">Servicios</a></li>
-    </ul>
-</nav>
-
+  <nav id="navbar">
+        <div class="navbar-brand">
+            <a target="_blank" href="https://github.com/ToMaZiT" class="github-link">
+                <i class="bi bi-github"></i>
+                <span class="github-name">tomazit</span> </a>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#pricing">Precios</a></li>
+            <li><a href="#" class="contact-btn">Contacto</a></li>
+        </ul>
+    </nav>
 
   <section id="inicio" class="hero-section">
 
@@ -183,7 +190,7 @@
         <div class="price-card">
             <div class="card-header">
                 <h4>Presencia Esencial</h4>
-                <p class="price"><span>$120.000</span> ARS</p>
+                <p class="price"><span>$119.999</span> ARS</p>
                 <p class="subtitle">Ideal para empezar.</p>
             </div>
             <ul class="features-list">
@@ -201,7 +208,7 @@
         <div class="price-card featured">
             <div class="card-header">
                 <h4>Impulso Profesional</h4>
-                <p class="price"><span>$300.000</span> ARS</p>
+                <p class="price"><span>$299.999</span> ARS</p>
                 <p class="subtitle">El más popular.</p>
             </div>
             <ul class="features-list">
@@ -220,7 +227,7 @@
         <div class="price-card">
             <div class="card-header">
                 <h4>Estrategia de Crecimiento</h4>
-                <p class="price"><span>$450.000</span> ARS</p>
+                <p class="price"><span>$449.999</span> ARS</p>
                 <p class="subtitle">Solución completa para crecer.</p>
             </div>
             <ul class="features-list">
@@ -237,6 +244,32 @@
         </div>
     </div>
     <p class="disclaimer">Los precios son estimados y pueden variar según la complejidad del proyecto. Ponte en contacto para una cotización precisa.</p>
+</section>
+
+    <section id="contact" class="contact-section">
+    <div class="contact-content">
+        <h3>¿Listo para transformar tu presencia online?</h3>
+        <p>Hablemos sobre tu próximo proyecto. Estoy aquí para convertir tus ideas en soluciones digitales excepcionales.</p>
+        <div class="contact-methods">
+            <a href="mailto:tuemail@example.com" class="contact-icon-link" aria-label="Enviar correo electrónico">
+                <i class="bi bi-envelope-fill"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://wa.me/tunumerodetelefono?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20tus%20servicios." target="_blank" class="contact-icon-link" aria-label="Contactar por WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="https://www.linkedin.com/in/tuperfillinkedin" target="_blank" class="contact-icon-link" aria-label="Visitar perfil de LinkedIn">
+                <i class="bi bi-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/tuusuario" target="_blank" class="contact-icon-link" aria-label="Visitar perfil de GitHub">
+                <i class="bi bi-github"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
+        <button class="btn-primary open-form-modal" data-plan="general">Enviar un Mensaje Directo</button>
+    </div>
 </section>
 
   <footer>
@@ -274,6 +307,8 @@
     <p>¡Gracias! Tu mensaje ha sido enviado.</p>
     <button class="close-success-message">Entendido</button>
 </div>
+
+    
 
   <script src="main.js"></script>
 </body>
